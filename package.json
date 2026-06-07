@@ -1,0 +1,26 @@
+{
+  "name": "harvestiq",
+  "version": "1.0.0",
+  "description": "Enterprise-grade web crawler and data aggregation platform",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev": "docker-compose up",
+    "build": "docker-compose build",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "logs:api": "docker-compose logs -f api",
+    "logs:web": "docker-compose logs -f web",
+    "logs:scraper": "docker-compose logs -f scraper",
+    "shell:api": "docker-compose exec api sh",
+    "shell:scraper": "docker-compose exec scraper bash"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
